@@ -1,0 +1,51 @@
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=Inter:wght@400;500;600&display=swap');
+
+@theme {
+  --color-navy: #1A2B4A;
+  --color-navy-mid: #2E5090;
+  --color-accent: #E8F0FC;
+  --color-light: #F7F9FD;
+  --color-border: #CBD5E0;
+  --color-text-dark: #1A2B4A;
+  --color-text-mid: #4A5568;
+  --color-text-light: #718096;
+  --font-heading: 'Sora', system-ui, sans-serif;
+  --font-body: 'Inter', system-ui, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: #F7F9FD;
+  color: #1A2B4A;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4 {
+  font-family: var(--font-heading);
+}
+
+/* Animate on load */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(16px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.fade-up {
+  animation: fadeUp 0.5s ease forwards;
+}
+
+.fade-up-delay-1 { animation-delay: 0.1s; opacity: 0; }
+.fade-up-delay-2 { animation-delay: 0.2s; opacity: 0; }
+.fade-up-delay-3 { animation-delay: 0.3s; opacity: 0; }
+
+/* Table row hover */
+.product-row:hover {
+  background-color: #EEF4FF !important;
+}
